@@ -1,0 +1,41 @@
+<div class="row carousel-holder">
+    <div class="col-md-12">
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Product name</th>
+                    <th>Price</th>
+                    <th>Category</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="item in data">
+                    <td><img data-ng-src="{{item.image}}" /></td>
+                    <td><a href="#ProductDetails" ng-click="productDetails($index)">{{item.name}} </a></td>
+                    <td>{{item.price}} $</td>
+                    <td>{{item.category}}</td>
+                    <td>
+                        <button type="button" class="btn btn-success btn-lg" ng-click="addToBasket($index)">
+                                <span class="glyphicon glyphicon-shopping-cart"></span>
+                            </button>
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div>
+<style>
+    img {
+        width: 200px;
+    }
+    
+    .btn:not(.btn-raised).btn-success,
+    .input-group-btn .btn:not(.btn-raised).btn-success {
+        color: white;
+    }
+</style>

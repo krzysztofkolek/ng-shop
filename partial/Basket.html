@@ -1,0 +1,45 @@
+<div class="row carousel-holder">
+    <div class="col-md-12">
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Image</th>
+                    <th>Nazwa produktu</th>
+                    <th>Price</th>
+                    <th>Kategoria</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="item in basket">
+                    <td><img data-ng-src="{{item.image}}" /></td>
+                    <td>{{item.name}} </td>
+                    <td>{{item.price}} $</td>
+                    <td>{{item.category}}</td>
+                    <td>
+                        <button type="button" class="btn btn-danger btn-lg" ng-click="removeFromBasket($index)">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div>
+
+
+<div class="row carousel-holder">
+    <div class="col-md-12">
+        <b>Total:</b> <br /> {{totalPrice}} $ <br />
+        <button type="button" class="btn btn-raised btn-danger" ng-click="moveToCheckOut()">
+        BUY <span class="glyphicon glyphicon-usd"></span>
+    </button>
+    </div>
+</div>
+<style>
+    img {
+        width: 200px;
+    }
+</style>

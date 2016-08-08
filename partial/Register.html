@@ -1,0 +1,72 @@
+<div class="container">
+    <h1 class="well">Registration Form</h1>
+    <div class="col-lg-12 well">
+        <div class="row">
+            <div class="alert alert-danger" ng-visible="!error.visible" ng-repeat="item in error.message">
+                <strong>{{item}} !</strong>
+            </div>
+            <form>
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-6 form-group">
+                            <label>First Name</label>
+                            <input type="text" placeholder="Enter First Name Here.." class="form-control" ng-model="usermodel.firstname">
+                        </div>
+                        <div class="col-sm-6 form-group">
+                            <label>Last Name</label>
+                            <input type="text" placeholder="Enter Last Name Here.." class="form-control" ng-model="usermodel.lastname">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Address</label>
+                        <textarea placeholder="Enter Address Here.." rows="3" class="form-control" ng-model="usermodel.adress"></textarea>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4 form-group">
+                            <label>City</label>
+                            <input type="text" placeholder="Enter City Name Here.." class="form-control" ng-model="usermodel.city">
+                        </div>
+                        <div class="col-sm-4 form-group">
+                            <label>State</label>
+                            <input type="text" placeholder="Enter State Name Here.." class="form-control" ng-model="usermodel.state">
+                        </div>
+                        <div class="col-sm-4 form-group">
+                            <label>Zip</label>
+                            <input type="text" placeholder="Enter Zip Code Here.." class="form-control" ng-model="usermodel.zipcode">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 form-group">
+                            <label>Title</label>
+                            <input type="text" placeholder="Enter Designation Here.." class="form-control" ng-model="usermodel.title">
+                        </div>
+                        <div class="col-sm-6 form-group">
+                            <label>Company</label>
+                            <input type="text" placeholder="Enter Company Name Here.." class="form-control" ng-model="usermodel.company">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Phone Number</label>
+                        <input type="text" placeholder="Enter Phone Number Here.." class="form-control" ng-model="usermodel.phonenumebr">
+                    </div>
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="text" placeholder="Enter Email Address Here.." class="form-control" autofocus ng-model="usermodel.email">
+                    </div>
+                    <div class="form-group">
+                        <label>Website</label>
+                        <input type="text" placeholder="Enter Website Name Here.." class="form-control" ng-model="usermodel.website">
+                    </div>
+                    <button type="button" class="btn btn-lg btn-info" ng-click="submitRegistration()">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<style>
+    .btn:not(.btn-raised).btn-info,
+    .input-group-btn .btn:not(.btn-raised).btn-info {
+        color: white;
+    }
+</style>

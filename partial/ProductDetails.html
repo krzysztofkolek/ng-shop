@@ -1,0 +1,33 @@
+<div class="row carousel-holder">
+    <div class="col-md-12">
+        <dl class="dl-horizontal">
+            <dt><img data-ng-src="{{product.image}}" /></dt>
+        </dl>
+        <dl id="second-container">
+            <dt>Name: {{product.name}}</dt>
+            <dt>Price: {{product.price}} $</dt>
+            <dt>Category: {{product.category}}</dt>
+            <dt>In stock: <span class="glyphicon glyphicon-{{getInStock()}}"></span></dt>
+            <dt>Brand: {{product.details.brand}}</dt>
+            <dt>Weight: {{product.details.weight}}</dt>
+        </dl>
+    </div>
+</div>
+<style>
+    #main> ng-view> div> div> dl.dl-horizontal> dt {
+        width: 250px !important;
+    }
+    
+    dt {
+        text-align: left !important;
+        width: 250px !important;
+    }
+    
+    img {
+        width: 250px;
+    }
+    
+    #second-container {
+        padding-left: 180px;
+    }
+</style>
